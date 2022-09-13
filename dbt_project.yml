@@ -37,3 +37,7 @@ models:
       +schema: jaffle_shop
       materialized: view
       bind: false
+    tickit:
+      +schema: tickit
+      materialized: view
+      bind: false
