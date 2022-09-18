@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  
+  - name: tickit_sales_summary
+    type: dashboard
+    maturity: medium
+    url: https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/3cce382c-2528-4ba2-9d9e-dfcf3d0048f4/views/6918294e-f034-4fbf-9579-8e371e6f8023
+    description: >
+      TICKIT sales summary dashboard, authored in Amazon QuickSight
+    
+    depends_on:
+      - ref('fct_sales')
+      - ref('fct_listings')
+      
+    owner:
+      name: Tyler Hillery
+      email: tyler.p.hillery@outlook.com
