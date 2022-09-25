@@ -35,8 +35,18 @@ models:
   dbt_redshift_demo:
     jaffle_shop:
       +schema: jaffle_shop
-      materialized: view
-      bind: false
+      
+      staging:
+        materialized: view
+        bind: false
+      
+      intermediate:
+        materialized: view
+        bind: false
+      
+      marts:
+        materialized: table
+    
     tickit:
       +schema: tickit
       materialized: view
