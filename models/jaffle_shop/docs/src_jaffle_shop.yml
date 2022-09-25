@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: dbtworkshop
+    description: Sales activity for the ficitonal jaffle shop web site, where users buy and sell jaffles.
+    database: dev
+    schema: dbtworkshop
+    tables:
+      - name: jaffle_shop_orders
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique 
+
+      - name: jaffle_shop_customers
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+      
+      - name: stripe_payments
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
