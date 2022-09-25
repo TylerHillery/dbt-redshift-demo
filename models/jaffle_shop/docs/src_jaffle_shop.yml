@@ -7,7 +7,22 @@ sources:
     schema: dbtworkshop
     tables:
       - name: jaffle_shop_orders
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique 
 
       - name: jaffle_shop_customers
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
       
       - name: stripe_payments
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
